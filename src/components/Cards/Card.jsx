@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from '../Button/Button'
 
 const Card = (props) => {
   return (
@@ -8,7 +9,10 @@ const Card = (props) => {
 
             <p className="card-title"> {props.title} </p>
 
+            <Button text={"Add"} cb={() => {alert("agregado")}} />
+
         </div>  
+        
 
     </div>
   )

@@ -1,8 +1,11 @@
 
 import './App.css'
 import Card from './components/Cards/Card'
+import Counter from './components/Counter/Counter'
+import CounterContainer from './components/Counter/CounterContainer'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import NavBar from './components/Navbar/NavBar'
+
 
 
 
@@ -12,22 +15,10 @@ function App() {
 
   
   return (
-    <div className="container">
-   <NavBar/>
-   <ItemListContainer greeting="Bienvenidos!!"/>
-   <div className="row">
-    <div className="col-3">
-   < Card title="Cerveza Warsteiner" />
+    <div>    < Card/>
+   <CounterContainer/>
    </div>
-   <div className="col-3">
-   < Card title="Cerveza Grolsch" />
-   </div>
-   <div className="col-3">
-   < Card title="Cerveza Amstel" />
-   </div>
-   </div>
-   </div>
-  
+
   )
 }
 
