@@ -12,21 +12,7 @@ function App() {
 
   
   return (
-    <div className="container">
-   <NavBar/>
-   <ItemListContainer greeting="Bienvenidos!!"/>
-   <div className="row">
-    <div className="col-3">
-   < Card title="Cerveza Warsteiner" />
-   </div>
-   <div className="col-3">
-   < Card title="Cerveza Grolsch" />
-   </div>
-   <div className="col-3">
-   < Card title="Cerveza Amstel" />
-   </div>
-   </div>
-   </div>
+ <NavBar></NavBar>
   
   )
 }

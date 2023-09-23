@@ -1,31 +1,26 @@
 import React from 'react'
 import CartWidget from '../CartWidget/CartWidget'
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
 const NavBar = () => {
   return (
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Beer Me</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Cervezas nacionales</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Cervezas importadas</a>
-          </li>
-        
-        </ul>
-      </div>
+<div>
+    <Navbar bg="dark" data-bs-theme="dark">
+    <Container>
+      <Navbar.Brand href="#home">Beer Me</Navbar.Brand>
+      <Nav className="me-auto">
+        <Nav.Link href="#home">Inicio</Nav.Link>
+        <Nav.Link href="#features">Cervezas importadas</Nav.Link>
+        <Nav.Link href="#pricing">Cervezas nacionales</Nav.Link>
+      </Nav>
       <CartWidget/>
-    </div>
-  </nav>
+    </Container>
+    </Navbar>
+  
+    
+      </div>
   )
 }
 
