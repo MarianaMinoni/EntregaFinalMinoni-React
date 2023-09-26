@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import Container from 'react-bootstrap/Container';
-import { ItemList } from '../ItemList/ItemList';
+import  Container  from 'react-bootstrap/Container';
+import {Row} from 'react-bootstrap';
+import ItemList from '../ItemList/ItemList';
+
 
 
 
@@ -17,14 +19,13 @@ const ItemListContainer = () => {
   
    }
 
-   console.log(items)
-
+  
    useEffect ( () => {
     getData()   
 
    }, [])
 
-  
+   console.log(items)
 
   return (
   <Container>
@@ -37,7 +38,7 @@ const ItemListContainer = () => {
     </Row>    
   </Container>
    
-  )
+  );
 }
 
 export default ItemListContainer

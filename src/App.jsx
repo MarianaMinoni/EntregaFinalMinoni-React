@@ -1,6 +1,6 @@
 
 import './App.css'
-import Card from './components/Cards/Card'
+import ItemDetailContainer from './components/Details/ItemDetailContainer'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import NavBar from './components/Navbar/NavBar'
 
@@ -12,7 +12,12 @@ function App() {
 
   
   return (
+    <div>
  <NavBar></NavBar>
+ {/*<ItemListContainer />*/}
+ <ItemDetailContainer />
+
+ </div>
   
   )
 }

@@ -3,28 +3,54 @@ import { Col } from 'react-bootstrap'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-export const ItemList = ({items}) => {
+
+ const ItemList = ({items}) => {
   return (
     <>
     {
         items.map( (item) => (
+        
 
-            <Col md={4}>
-                <Card />
-
-
+            <Col md={4} lg={3} xs={12} key={item.id}>
+                <CardList item ={item}/>
 
             </Col>
         )
-
+    
 
         )
+        
     }
     
     
     </>
     
-
+    
 
   )
 }
+
+
+
+//cardlist
+
+const CardList = ({item}) => {
+
+    return (
+      <Card style={{ width: '18rem' }} className="m-5">
+        <Card.Img variant="top" src={item.image} />
+        <Card.Body>
+          <Card.Title>{item.title}</Card.Title>
+          <Card.Text>
+            {item.description}
+          </Card.Text>
+          <Button variant="primary">Ver detalle</Button>
+        </Card.Body>
+      </Card>
+    );
+  
+  
+  }
+
+
+export default ItemList

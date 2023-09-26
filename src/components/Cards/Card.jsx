@@ -1,5 +1,7 @@
 import React from 'react'
 
+
+
 const Card = (props) => {
   return (
     <div className="card">
@@ -13,5 +15,8 @@ const Card = (props) => {
     </div>
   )
 }
+
+
+
 
 export default Card
