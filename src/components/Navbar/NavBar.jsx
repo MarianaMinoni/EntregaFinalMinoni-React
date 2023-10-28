@@ -8,15 +8,20 @@ import { Link } from 'react-router-dom';
 const NavBar = () => {
   return (
 <div>
-    <Navbar bg="dark" data-bs-theme="dark">
+    <Navbar bg="light" data-bs-theme="light">
     <Container>
-      <Navbar.Brand href="/">Beer Me</Navbar.Brand>
+      <Link to="/" style={{textDecoration:"none"}}>
+      <Navbar.Brand >Beer Me</Navbar.Brand>
+      </Link>
       <Nav className="me-auto">
         <Link style={{textDecoration:"none", marginRight:"10px"}}  to="/">Inicio</Link>
-        <Link style={{textDecoration:"none", marginRight:"10px"}} to="/cervezasimportadas">Cervezas importadas</Link>
-        <Link style={{textDecoration:"none", marginRight:"10px"}} to="/cervezasnacionales">Cervezas nacionales</Link>
+        <Link style={{textDecoration:"none", marginRight:"10px"}} to="/categoria/importadas">Cervezas importadas</Link>
+        <Link style={{textDecoration:"none", marginRight:"10px"}} to="/categoria/nacionales">Cervezas nacionales</Link>
+        <Link style={{textDecoration:"none", marginRight:"10px"}} to="/cart">Cart </Link>
+        <Link style={{textDecoration:"none", marginRight:"10px"}} to="/user">Perfil </Link>
+        
       </Nav>
-      <CartWidget/>
+      <CartWidget />
     </Container>
     </Navbar>
   

@@ -1,8 +1,30 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import ItemList from '../components/ItemList/ItemList'
 
 const CervezasImportadas = () => {
+  
+  const [items, setItems] = useState([])
+
+  const getData = () => {
+    fetch("https://fakestoreapi.com/products/category/jewelery")
+    .then(response => response.json())
+    .then(data => setItems(data))
+    .catch(error => console.log(error))
+  }
+
+  useEffect(() => {
+    getData()
+  },[])
+
+
   return (
-    <div>CervezasImportadas</div>
+    <div>
+      
+      <ItemList items = {items} />
+     
+  
+      
+    </div>
   )
 }
 
